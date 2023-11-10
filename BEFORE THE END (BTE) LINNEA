@@ -1,0 +1,14 @@
+import { Linea } from "@thirdweb-dev/chains";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+
+// If used on the FRONTEND pass your 'clientId'
+const sdk = new ThirdwebSDK(Linea, {
+  clientId: "YOUR_CLIENT_ID",
+});
+// --- OR ---
+// If used on the BACKEND pass your 'secretKey'
+const sdk = new ThirdwebSDK(Linea, {
+  secretKey: "YOUR_SECRET_KEY",
+});
+
+const contract = await sdk.getContract("0xD58403a58067d706B3F847085eB3d79b1710A07B");
